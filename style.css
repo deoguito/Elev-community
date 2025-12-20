@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+h1, p {
+    text-align: center;
+    margin: 15px;
+}
+
+iframe{
+    height: auto;
+}
+
+.footer{
+    font-weight: 600;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px;
+}
+
+.video-container iframe {
+  width: 560px;
+  height: 315px;
+}
+
+
+.grupo-opcoes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.opcao{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: rgb(32, 32, 32);
+    color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 400;
+}
+
+.opcao:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+}
+
+.opcao input[type="radio"]{
+    accent-color: #fff;
+}
+
+.opcao:has(input:checked){
+    outline: 2px solid #fff;
+}
+
+.tela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+  width: 420px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+}
+
+.card-header {
+  background: #27ae60;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.card-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.card-price {
+  background: #eaf7ef;
+  border-radius: 6px;
+  padding: 8px 12px;
+  text-align: right;
+}
+
+.card-price .small {
+  font-size: 12px;
+  color: #2d7d46;
+  display: block;
+}
+
+.card-price .value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.cta-button {
+  background: linear-gradient(145deg, #000000, #1a1a1a);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 25px 32px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 rgba(255, 255, 255, 0);
+
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.7),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Clique */
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cta-button:hover::after {
+  opacity: 1;
+}
+
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.center {
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .tela,
+  .card,
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grupo-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .opcao {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Título */
+  h1, h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  /* Opções (cards com radio) */
+  .opcao {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500; /* negrito leve */
+    padding: 16px;
+    text-align: left;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Ajuste fino do radio */
+  .opcao input {
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+}
