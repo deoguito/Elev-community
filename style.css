@@ -10,17 +10,52 @@ html, body{
     overflow-y: auto;
 }
 
-h1, p {
+h1{
     text-align: center;
-    margin: 15px;
+    margin: 50px;
+    padding: 0;
+    margin-top: -10px;
+}
+
+p{
+ text-align: center;
+ margin: 20px;
+ margin-top: 30px;
 }
 
 iframe{
     height: auto;
 }
 
-.footer{
-    font-weight: 600;
+@keyframes blinkSlow{
+  0% {opacity: 1;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+
+.blink-slow{
+  animation: blinkSlow 2.5s infinite ease-in-out;
+}
+
+.header-text{
+  max-width: 700px;
+  margin: 40px auto 0;
+  text-align: center; 
+}
+
+.last-words{
+  line-height: 0.80;
+  margin: 20px;
+}
+
+.text-footer{
+  margin-bottom: 40px;
+}
+
+.page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .video-container {
@@ -28,11 +63,18 @@ iframe{
   justify-content: center;
   width: 100%;
   margin: 10px;
+  border-radius: 18px;
+  padding: 4px;
+  background: linear-gradient(135deg, #000000);
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.692);
 }
 
 .video-container iframe {
-  width: 560px;
-  height: 315px;
+  width: 100%;
+  height: 450px;
+  border-radius: 12px;
+  display: block;
 }
 
 
@@ -62,7 +104,7 @@ iframe{
 }
 
 .opcao input[type="radio"]{
-    accent-color: #fff;
+    accent-color: #e74040;
 }
 
 .opcao:has(input:checked){
@@ -186,7 +228,99 @@ iframe{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px;
 }
+
+.card-community {
+  max-width: 800px;
+  margin: 60px auto;
+  background: #0b0b0b;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+}
+
+
+/* HEADER AMARELO */
+.card-community-header {
+  background: #e74040;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: 14px;
+  font-size: 14px;
+}
+
+.community-icons img{
+  display: block;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  background: #25d366;
+}
+
+.community-icons{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* CONTEÚDO */
+.card-content {
+  padding: 35px 40px;
+  color: white;
+}
+
+.card-content .intro {
+  margin-bottom: 18px;
+}
+
+/* LISTA */
+.card-content ul {
+  list-style: disc;
+  padding-left: 22px;
+}
+
+.card-content li {
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.card-content li span {
+  color: #e74040;
+  font-weight: bold;
+}
+
+/* DIVISÃO */
+.divider {
+  margin: 30px 0;
+  border-top: 1px dashed #2a2a2a;
+}
+
+/* REGRA */
+.rule-title {
+  text-align: center;
+  color: #e74040;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.rule {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.rule-sub {
+  text-align: center;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
 
 @media (max-width: 768px) {
   .video-container {
@@ -230,12 +364,15 @@ iframe{
 @media (max-width: 768px) {
   .card {
     width: 100%;
+    max-width: 60%;
+    padding: 0px;
   }
 }
 
+
 @media (max-width: 768px) {
   .cta-button {
-    width: 100%;
+    width: 80%;          
   }
 }
 
@@ -265,5 +402,25 @@ iframe{
   .opcao input {
     margin-top: 4px;
     flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    border-radius: 14px;
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .page iframe {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px){
+  .card-community {
+    margin: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
