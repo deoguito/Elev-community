@@ -434,7 +434,9 @@ iframe{
   }
 
   .card-price{
-    margin-right: -10px;
+    margin-right: -15px;
+    padding: 5px;
+
   }
 
   .card-header{
