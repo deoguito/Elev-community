@@ -59,6 +59,7 @@ iframe{
 
 .page{
   display: flex;
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -72,7 +73,7 @@ iframe{
   padding: 4px;
   background: linear-gradient(135deg, #000000);
   max-width: 800px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.692);
+  box-shadow: 0 0 20px rgb(255, 0, 0);
 }
 
 .video-container iframe {
@@ -250,8 +251,8 @@ iframe{
   background: #000000;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(255, 0, 0, 0.685);
-  color: #ff000098;
+  box-shadow: 0 20px 40px rgb(255, 0, 0);
+  color: #ff0000;
   font-family: Arial, sans-serif;
 }
 
@@ -485,6 +486,7 @@ iframe{
 @media (max-width: 768px) {
   .page {
     border-radius: 14px;
+    margin-top: 5px;
     padding: 10px;
     align-items: flex-start;
   }
